@@ -1,7 +1,7 @@
-###- ¿Qué comando utilizaste en el paso 11? ¿Por qué?
+### ¿Qué comando utilizaste en el paso 11? ¿Por qué?
 $ git reset --hard HEAD~1  -> Con este comando desago el commit recien hecho y el estado del proyecto me queda tal y como se encontraba antes de la modificación del fichero.
 
-####Contenido del fichero antes del comando 
+#### Contenido del fichero antes del comando 
 $ cat git-nuestro.md
 *Git* nuestro que estás en los repos
 Comprimidos sean tus *commits*
@@ -14,7 +14,7 @@ No nos dejes caer en *detached HEAD*
 y líbranos de *SVN*
 `git commit --amend`
 
-####Contenido del fichero después del comando 
+#### Contenido del fichero después del comando 
 $ cat git-nuestro.md
 Git nuestro
 Git nuestro que estas en los repos
@@ -29,10 +29,10 @@ y líbranos de SVN
 git commit --amend
 
 
-###- ¿Qué comando o comandos utilizaste en el paso 12? ¿Por qué?
+### ¿Qué comando o comandos utilizaste en el paso 12? ¿Por qué?
 git reset --hard 495a7ff -> Primero listo con reflog y veo el id al cual tengo que recuperar el trabajo recién desechado.
 
-####Contenido del fichero después del comando 
+#### Contenido del fichero después del comando 
 $ cat git-nuestro.md
 *Git* nuestro que estás en los repos
 Comprimidos sean tus *commits*
@@ -45,16 +45,16 @@ No nos dejes caer en *detached HEAD*
 y líbranos de *SVN*
 `git commit --amend`
 
-###- El merge del paso 13, ¿Causó algún conflicto? ¿Por qué?
+### El merge del paso 13, ¿Causó algún conflicto? ¿Por qué?
 $ git merge master  -> No causó ningún conflicto porque la rama que está intentando fusionar es un padre de la rama actual. 
 
-###- El merge del paso 19, ¿Causó algún conflicto? ¿Por qué?
+### El merge del paso 19, ¿Causó algún conflicto? ¿Por qué?
 $ git merge htmlify -> Este merge si causó conflictos porque los ficheros están modificados en diferentes líneas.
 
-###- El merge del paso 21, ¿Causó algún conflicto? ¿Por qué?
+### El merge del paso 21, ¿Causó algún conflicto? ¿Por qué?
 $ git merge styled -> No causó conflictos porque como lo hice desde el master que es el padre de styled este movió la rama y apuntó al mismo commit ambas ramas(master y styled) es decir ambas tienen la misma líneas en el fichero git-nuestro.md, hizo un Fast-forward. 
 
-###- ¿Qué comando o comandos utilizaste en el paso 25?
+### ¿Qué comando o comandos utilizaste en el paso 25?
 $ git log --graph --decorate --pretty=oneline
 *   ff2485bb639a8e0334b7a55ce61331d2033ecc26 (HEAD -> master, styled) Solucionando conflictos tras el merge de la rama htmlify en styled, quedándonos con el contenido de la rama styled. Paso 20.
 |\
@@ -64,7 +64,7 @@ $ git log --graph --decorate --pretty=oneline
 * 68eaa9d5759ce323361ef4cd6b3f17c46372c038 Moviendo lo que hay en el staging area al repositorio. Paso 4.
 
 
-###- El merge del paso 26, ¿Podría ser fast forward? ¿Por qué?
+### El merge del paso 26, ¿Podría ser fast forward? ¿Por qué?
 $ git merge --no-ff title -> Si puede ser no fast forward porque crea un commit con el merge de las dos ramas y el HEAD apunta a ese commit de la rama master.
 
 $ git log --graph --decorate --pretty=oneline
@@ -80,7 +80,7 @@ $ git log --graph --decorate --pretty=oneline
 * 68eaa9d5759ce323361ef4cd6b3f17c46372c038 Moviendo lo que hay en el staging area al repositorio. Paso 4.
 
 
-###- ¿Qué comando o comandos utilizaste en el paso 27?
+### ¿Qué comando o comandos utilizaste en el paso 27?
 $ git reset HEAD~1
 
 alevaz@ESEURALEVAZ-LAP MINGW64 ~/Datos-D/Bootcamp Web/Curso - Git, GitHub Y SourceTree/practica-git-github-avazquezch (master)
@@ -113,13 +113,13 @@ $ git log --graph --decorate --pretty=oneline
 * 68eaa9d5759ce323361ef4cd6b3f17c46372c038 Moviendo lo que hay en el staging area al repositorio. Paso 4.
 
 
-###- ¿Qué comando o comandos utilizaste en el paso 28?
+### ¿Qué comando o comandos utilizaste en el paso 28?
 $ git reset --hard 68eaa9d5759ce323361ef4cd6b3f17c46372c038
 
 Con esto lo dejo tal y como estaba antes cuando hice el primer commit.
 
 
-###- ¿Qué comando o comandos utilizaste en el paso 29?
+### ¿Qué comando o comandos utilizaste en el paso 29?
 $ git branch -d title
 error: The branch 'title' is not fully merged.
 If you are sure you want to delete it, run 'git branch -D title'.
@@ -129,7 +129,7 @@ $ git branch -D title
 Deleted branch title (was f586742).
 
 
-###- ¿Qué comando o comandos utilizaste en el paso 30?
+### ¿Qué comando o comandos utilizaste en el paso 30?
 
 Con este veo el id
 $ git reflog
@@ -189,7 +189,7 @@ y líbranos de *SVN*
 `git commit --amend`
 
 
-###- ¿Qué comando o comandos usaste en el paso 32?
+### ¿Qué comando o comandos usaste en el paso 32?
 
 Con este comando veo el contenido del fichero git-nuestro.md
 $ cat git-nuestro.md
@@ -225,7 +225,7 @@ y líbranos de SVN
 git commit --amend
 
 
-###- ¿Qué comando o comandos usaste en el punto 33?
+### ¿Qué comando o comandos usaste en el punto 33?
 
 Con este veo el id
 $ git reflog
